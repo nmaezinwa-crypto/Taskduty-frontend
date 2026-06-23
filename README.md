@@ -4,7 +4,7 @@ A task management web application built with React, TypeScript, and TailwindCSS.
 
 ## Tech Stack
 - React + TypeScript
-- TailwindCSS
+- TailwindCSSg
 - React Router DOM
 - Vite
 

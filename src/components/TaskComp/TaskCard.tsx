@@ -1,4 +1,4 @@
-import type { ITask } from '../../types/Index';
+import type { ITask } from '../../types/index';
 import ActionButton from './ActionButton';
 import { getCategoryColor } from '../../utils/helpers';
 

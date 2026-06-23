@@ -5,7 +5,7 @@ import FormInput from '../components/TaskComp/FormInput';
 import TagsSelector from '../components/TaskComp/TagsSelector';
 import BackToTop from '../components/TaskComp/BackToTop';
 import useTasks from '../hooks/useTask';
-import type { ITask, Category } from '../types/Index';
+import type { ITask, Category } from '../types/index';
 
 const EditTaskPage = () => {
   const navigate = useNavigate();

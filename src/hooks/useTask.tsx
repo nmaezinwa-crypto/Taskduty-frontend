@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { ITask, CreateTaskData, UpdateTaskData } from '../types/Index';
+import type { ITask, CreateTaskData, UpdateTaskData } from '../types/index';
 import { taskService } from '../services/taskServices';
 
 const useTasks = () => {

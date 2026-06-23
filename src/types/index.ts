@@ -7,6 +7,7 @@ export interface ITask {
   dueDate: string;
   category: Category;
   completed: boolean;
+  user: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -32,5 +33,19 @@ export interface ApiResponse<T> {
   task?: T;
   tasks?: T[];
   count?: number;
+  error?: string;
+}
+
+export interface IUser {
+  id: string;
+  name: string;
+  email: string;
+}
+
+export interface AuthResponse {
+  success: boolean;
+  message?: string;
+  token?: string;
+  user?: IUser;
   error?: string;
 }

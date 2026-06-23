@@ -4,7 +4,7 @@ import TaskHeader from '../components/TaskComp/TaskHeader';
 import TaskList from '../components/TaskComp/TaskList';
 import BackToTop from '../components/TaskComp/BackToTop';
 import useTasks from '../hooks/useTask';
-import type { ITask } from '../types/Index';
+import type { ITask } from '../types/index';
 
 
 const TasksPage = () => {

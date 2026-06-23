@@ -1,4 +1,4 @@
-import type { Category } from '../../types/Index';
+import type { Category } from '../../types/index';
 
 interface TagsSelectorProps {
   selected: Category;

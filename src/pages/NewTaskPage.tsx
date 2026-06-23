@@ -6,7 +6,7 @@ import TagsSelector from '../components/TaskComp/TagsSelector';
 import BackToTop from '../components/TaskComp/BackToTop';
 import useTasks from '../hooks/useTask';
 import { getTodayString } from '../utils/helpers';
-import type { Category } from '../types/Index';
+import type { Category } from '../types/index';
 
 const NewTaskPage = () => {
   const navigate = useNavigate();
