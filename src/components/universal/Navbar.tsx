@@ -44,7 +44,15 @@ const Navbar = ({ showNewTask = true, showAllTasks = true }: NavbarProps) => {
             All Tasks
           </Link>
         )}
-
+          
+         {/* Trash Link */}
+          <Link
+          to="/trash"
+          className="text-gray-700 hover:text-purple-600 font-medium transition-colors"
+          >
+         🗑 Trash
+        </Link>
+        
         {/* User name */}
         {user && (
           <span className="text-gray-700 font-medium text-sm">
@@ -67,6 +75,7 @@ const Navbar = ({ showNewTask = true, showAllTasks = true }: NavbarProps) => {
       className="w-9 h-9 rounded-full object-cover cursor-pointer hover:opacity-80 transition-opacity"
        />
       </div>
+
     </nav>
   );
 };

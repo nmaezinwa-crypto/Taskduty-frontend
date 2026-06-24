@@ -8,6 +8,8 @@ export interface ITask {
   category: Category;
   completed: boolean;
   user: string;
+  deleted: boolean;
+  deletedAt: string | null;
   createdAt: string;
   updatedAt: string;
 }

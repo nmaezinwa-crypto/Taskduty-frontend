@@ -47,4 +47,30 @@ export const taskService = {
     const data: ApiResponse<ITask> = await res.json();
     if (!data.success) throw new Error(data.message || 'Failed to delete task');
   },
+
+  getTrashedTasks: async (): Promise<ITask[]> => {
+    const res = await fetch(`${BASE_URL}/trash`, { headers: getHeaders() });
+    const data: ApiResponse<ITask> = await res.json();
+    if (!data.success) throw new Error(data.message || 'Failed to fetch trash');
+    return data.tasks || [];
+  },
+
+  restoreTask: async (id: string): Promise<ITask> => {
+    const res = await fetch(`${BASE_URL}/${id}/restore`, {
+      method: 'PUT',
+      headers: getHeaders(),
+    });
+    const data: ApiResponse<ITask> = await res.json();
+    if (!data.success) throw new Error(data.message || 'Failed to restore task');
+    return data.task!;
+  },
+
+  permanentDeleteTask: async (id: string): Promise<void> => {
+    const res = await fetch(`${BASE_URL}/${id}/permanent`, {
+      method: 'DELETE',
+      headers: getHeaders(),
+    });
+    const data: ApiResponse<ITask> = await res.json();
+    if (!data.success) throw new Error(data.message || 'Failed to permanently delete task');
+  },
 };

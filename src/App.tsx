@@ -5,8 +5,9 @@ import NewTaskPage from './pages/NewTaskPage';
 import EditTaskPage from './pages/EditTaskPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import ProtectedRoute from './components/universal/ProtectedRoute';
 import ProfilePage from './pages/ProfilePage';
+import TrashPage from './pages/TrashPage';
+import ProtectedRoute from './components/universal/ProtectedRoute';
 
 const App = () => {
   return (
@@ -29,7 +30,11 @@ const App = () => {
         <Route path="/edit-task/:id" element={
           <ProtectedRoute><EditTaskPage /></ProtectedRoute>
         } />
-        <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>
+        <Route path="/profile" element={
+          <ProtectedRoute><ProfilePage /></ProtectedRoute>
+        } />
+        <Route path="/trash" element={
+          <ProtectedRoute><TrashPage /></ProtectedRoute>
         } />
       </Routes>
     </BrowserRouter>
